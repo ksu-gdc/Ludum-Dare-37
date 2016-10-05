@@ -1,0 +1,3 @@
+Scenes folder
+
+This folder is to house all the scenes used in the game

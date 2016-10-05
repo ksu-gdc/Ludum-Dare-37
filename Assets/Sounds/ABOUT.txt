@@ -1,0 +1,3 @@
+Souds Folder
+
+This folder contains all sounds and music used in the game

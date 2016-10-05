@@ -1,0 +1,3 @@
+Scripts Folder
+
+This folder houses all of the scripts used in the game

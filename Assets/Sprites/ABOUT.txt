@@ -1,0 +1,3 @@
+Sprites Folder
+
+This folder contains all raw sprites used in the game
