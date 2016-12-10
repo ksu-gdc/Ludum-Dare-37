@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.Events;
 
-public class Detected : MonoBehaviour {
+public class TriggerInvoker: MonoBehaviour {
 
     public UnityEvent OnEnter, OnStay, OnExit;
 
