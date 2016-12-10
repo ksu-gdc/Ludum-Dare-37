@@ -21,20 +21,4 @@ public class Detected : MonoBehaviour {
     {
         OnExit.Invoke();
     }
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        Debug.Log("Collision entered");
-        OnEnter.Invoke();
-    }
-
-    void OnCollisionStay2D(Collision2D coll)
-    {
-        OnStay.Invoke();
-    }
-
-    void OnCollisionExit2D(Collision2D coll)
-    {
-        OnExit.Invoke();
-    }
 }
