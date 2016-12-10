@@ -102,7 +102,6 @@ GameObject:
   - 92: {fileID: 26355087}
   - 124: {fileID: 26355086}
   - 81: {fileID: 26355085}
-  - 114: {fileID: 26355090}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -178,20 +177,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &26355090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 26355084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c90205ae714dddf42847c580a6bff615, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Detectables: []
-  DetectionRadius: 0
-  collider_bounds: {fileID: 0}
 --- !u!1 &169949102
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +229,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 842535203}
   - 212: {fileID: 842535202}
-  m_Layer: 0
+  - 58: {fileID: 842535204}
+  m_Layer: 9
   m_Name: Test Detectee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,6 +284,20 @@ Transform:
   - {fileID: 169949103}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!58 &842535204
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 842535201}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!1 &1567074398
 GameObject:
   m_ObjectHideFlags: 0
