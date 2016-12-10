@@ -15,7 +15,10 @@ public class Player_Controller : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        Vector3 forward = transform.forward;
+        Vector3 headingAngle = Quaternion.LookRotation(forward).eulerAngles;
         Vector2 move = new Vector2(moveHorizontal, moveVertical);
         rb2d.AddForce(move * speed);
+        transform.Rotate; 
     }
 }
