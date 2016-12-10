@@ -32,4 +32,12 @@ public class Player_Controller : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
         }
     }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 }
