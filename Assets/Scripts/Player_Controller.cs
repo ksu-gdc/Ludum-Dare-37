@@ -24,15 +24,13 @@ public class Player_Controller : MonoBehaviour
             transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
         }
     }
-<<<<<<< HEAD
-    
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Pick Up"))
+        if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
         }
-=======
+    }
 
     void FixedUpdate()
     {
@@ -45,6 +43,6 @@ public class Player_Controller : MonoBehaviour
         }
         else anim.SetBool("Walking", false);
         rb2d.AddForce(move * speed);
->>>>>>> 762a1052314eaa43ea7a1beb1a8327be610a5e19
+
     }
 }
