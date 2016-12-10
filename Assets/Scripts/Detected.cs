@@ -8,6 +8,7 @@ public class Detected : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        Debug.Log("Collision entered");
         OnEnter.Invoke();
     }
 
