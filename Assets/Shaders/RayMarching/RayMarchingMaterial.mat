@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: DynamicLightingMaterial
-  m_Shader: {fileID: 4800000, guid: e650bdc5177668947b72c656049d6223, type: 3}
+  m_Name: RayMarchingMaterial
+  m_Shader: {fileID: 4800000, guid: 79cde8304c45b81489a30bed216514a4, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -42,7 +42,7 @@ Material:
     - first:
         name: _DisplaceTex
       second:
-        m_Texture: {fileID: 8400000, guid: b1551a6932749ab498ae6642f186c50d, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -77,6 +77,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: _AspectRatio
+      second: 0.51
+    - first:
         name: _BumpScale
       second: 1
     - first:
@@ -100,6 +103,9 @@ Material:
     - first:
         name: _GlossyReflections
       second: 1
+    - first:
+        name: _Intensity
+      second: 0.257
     - first:
         name: _Magnitutde
       second: 0

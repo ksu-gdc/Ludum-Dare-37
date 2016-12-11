@@ -47,15 +47,14 @@
 
 			float4 frag (v2f i) : SV_Target
 			{
-				float2 disp = tex2D(_DisplaceTex, i.uv).xy;
+				float4 disp = tex2D(_DisplaceTex, i.uv);
 				disp.y = disp.y - 1;
 				disp = ((disp * 2) - 1) * _Magnitude;
 
 				float4 main_col = tex2D(_MainTex, i.uv);
-				float2 disp_i = float2(i.uv.x, 1 - i.uv.y);
-				float4 disp_col = tex2D(_DisplaceTex, disp_i);
 				if (_Enabled == 1.0) {
-					main_col *= 1 - disp_col;
+					//main_col *= 1 - disp;
+					main_col = disp;
 				}
 				return main_col;
 			}
