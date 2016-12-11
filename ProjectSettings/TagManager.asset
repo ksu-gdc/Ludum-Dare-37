@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Pick Up
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Detectors
-  - Detectees
+  - 
+  - 
   - 
   - 
   - 
@@ -41,24 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-<<<<<<< HEAD
-  - name: background
-    uniqueID: 1163651289
-    locked: 0
-  - name: Obj
-    uniqueID: 2795389029
-    locked: 0
-  - name: Player
-    uniqueID: 2980247743
-=======
-  - name: Room_Flooring
-    uniqueID: 1940677839
-    locked: 0
-  - name: Furniture
-    uniqueID: 3772565347
-    locked: 0
-  - name: Character
-    uniqueID: 2235564265
->>>>>>> 67b8a33eb507826deb8847f632cad193fad7d5da
     locked: 0
