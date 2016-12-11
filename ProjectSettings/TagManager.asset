@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Room_Flooring
+    uniqueID: 1940677839
+    locked: 0
+  - name: Furniture
+    uniqueID: 3772565347
+    locked: 0
+  - name: Character
+    uniqueID: 2235564265
+    locked: 0
