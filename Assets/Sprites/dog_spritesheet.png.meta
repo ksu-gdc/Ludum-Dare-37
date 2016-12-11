@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 72a6d2d82c68b934a9f2e7cc3a50af30
-timeCreated: 1481420536
+guid: bc9579304b5a7ca46a0bf05d294951c0
+timeCreated: 1481426173
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,7 +15,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -64,10 +64,10 @@ TextureImporter:
       name: dog_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 67
-        width: 7
-        height: 20
+        x: 0
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -77,10 +77,10 @@ TextureImporter:
       name: dog_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 44
-        y: 65
-        width: 8
-        height: 22
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +90,10 @@ TextureImporter:
       name: dog_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 77
-        y: 67
-        width: 7
-        height: 20
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,10 +103,10 @@ TextureImporter:
       name: dog_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 12
-        y: 33
-        width: 8
-        height: 22
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +116,10 @@ TextureImporter:
       name: dog_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 45
-        y: 36
-        width: 9
-        height: 19
+        x: 32
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: dog_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 77
-        y: 35
-        width: 7
-        height: 20
+        x: 64
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,10 +142,10 @@ TextureImporter:
       name: dog_spritesheet_6
       rect:
         serializedVersion: 2
-        x: 13
-        y: 3
-        width: 7
-        height: 20
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: dog_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 43
-        y: 4
-        width: 9
-        height: 19
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
