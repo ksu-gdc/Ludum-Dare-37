@@ -100,8 +100,8 @@ GameObject:
   - 4: {fileID: 323151885}
   - 212: {fileID: 323151884}
   - 95: {fileID: 323151886}
-  - 50: {fileID: 323151883}
   - 114: {fileID: 323151882}
+  - 50: {fileID: 323151883}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb3db13628a4fa4882cfe42247f7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100000
+  speed: 2000000
 --- !u!50 &323151883
 Rigidbody2D:
   serializedVersion: 2
@@ -128,9 +128,9 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 323151881}
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
-  m_LinearDrag: 100000
+  m_LinearDrag: 1000000
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
