@@ -1,0 +1,3 @@
+Shaders folder
+
+This folder is meant to hold any shaders added to the project
