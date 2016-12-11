@@ -3,9 +3,6 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_DisplaceTex("Displacement Texture", 2D) = "white" {}
-		_Magnitutde("Magnitude", Range(0,0.1)) = 1
-		_Enabled("Enable Displacement", Range(0,1)) = 0
 	}
 	SubShader
 	{
@@ -41,23 +38,12 @@
 			}
 			
 			sampler2D _MainTex;
-			sampler2D _DisplaceTex;
-			float _Magnitude;
-			float _Enabled;
 
 			float4 frag (v2f i) : SV_Target
 			{
-				float2 disp = tex2D(_DisplaceTex, i.uv).xy;
-				disp.y = disp.y - 1;
-				disp = ((disp * 2) - 1) * _Magnitude;
-
-				float4 main_col = tex2D(_MainTex, i.uv);
-				float2 disp_i = float2(i.uv.x, 1 - i.uv.y);
-				float4 disp_col = tex2D(_DisplaceTex, disp_i);
-				if (_Enabled == 1.0) {
-					main_col *= 1 - disp_col;
-				}
-				return main_col;
+				float4 col = tex2D(_MainTex, i.uv);
+				col *= float4(i.uv.x, i.uv.y, 0, 1);
+				return col;
 			}
 			ENDCG
 		}
