@@ -1,0 +1,3 @@
+Materials folder
+
+This folder is meant to hold any Materials added to the project
