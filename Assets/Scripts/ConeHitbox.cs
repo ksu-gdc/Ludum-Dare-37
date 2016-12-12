@@ -44,7 +44,7 @@ public class ConeHitbox: MonoBehaviour {
         points[0] = Vector2.up * (ShortWidth / 2);
         points[1] = new Vector2(Length, LongWidth / 2);
         points[2] = new Vector2(Length, -1 * (LongWidth/2));
-        points[3] = cone.points[0] * -1;
+        points[3] = points[0] * -1;
         cone.SetPath(0, points);
     }
 }
