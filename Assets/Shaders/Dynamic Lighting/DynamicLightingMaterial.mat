@@ -16,6 +16,12 @@ Material:
     serializedVersion: 2
     m_TexEnvs:
     - first:
+        name: _Alpha
+      second:
+        m_Texture: {fileID: 8400000, guid: 0e23d567881b34b4da830d6769a1b25a, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
         name: _BumpMap
       second:
         m_Texture: {fileID: 0}
@@ -49,6 +55,12 @@ Material:
         name: _EmissionMap
       second:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _LightMap
+      second:
+        m_Texture: {fileID: 8400000, guid: 0e23d567881b34b4da830d6769a1b25a, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -102,7 +114,7 @@ Material:
       second: 1
     - first:
         name: _Magnitutde
-      second: 0
+      second: 1
     - first:
         name: _Metallic
       second: 0

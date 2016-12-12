@@ -91,21 +91,29 @@
 					frag_col *= (dst_dist - calc_dist >= 0.0) ? tex2D(_MainTex, calc_pos) : float4(1,1,1,0);
 				}
 
+				float4 result = tex_col;
+
+				if (is_not_color(result, float4(1, 1, 1, 0))) {
+					result = float4(1, 1, 1, 0);
+				}
+				else {
+					result = frag_col;
+				}
+				return result;
 				//frag_col = (dot(frag_col, frag_col) == 0.0) ? frag_col : float4(1, 1, 1, 0);
-				return frag_col;
 			}
 
 			float4 frag (v2f i) : SV_Target
 			{
 				float2 lightUV = i.lightPos.xy / i.lightPos.w;
-				lightUV.y = 1 - lightUV.y;
-				float4 col = tex2D(_MainTex, i.uv);
+				//lightUV.y = 1 - lightUV.y;
+				float4 tex_col = tex2D(_MainTex, i.uv);
 				//if (lightUV.x == i.uv.x && lightUV.y == i.uv.y) {
 				//if (inside_rect(i.uv, float4(lightUV.x-0.1, lightUV.y-0.1, lightUV.x+0.1, lightUV.y+0.1))){
 				
 				float2 aspect = float2(1, _AspectRatio);
 				float dist = distance(aspect * lightUV, aspect * i.uv);
-				col = march(i, aspect, i.uv, lightUV, _MarchDist);
+				float4 col = march(i, aspect, i.uv, lightUV, _MarchDist);
 				/*
 				if(dist < _Intensity){
 					col = float4(1, 1, 1, 0);
@@ -118,6 +126,8 @@
 				*/
 				if (dist >= _Intensity) col = float4(0, 0, 0, 0);
 				else col *= lerp(float4(1, 1, 1, 0), float4(0, 0, 0, 0), dist / _Intensity);
+
+				//if (is_color(tex_col, float4(0, 0, 0, 0))) col = float4(1, 1, 1, 0);
 				//col = float4(i.lightPos.xyz, 0);
 				return col;
 			}

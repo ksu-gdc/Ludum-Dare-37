@@ -3,14 +3,19 @@
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
-		_DisplaceTex("Displacement Texture", 2D) = "white" {}
-		_Magnitutde("Magnitude", Range(0,0.1)) = 1
-		_Enabled("Enable Displacement", Range(0,1)) = 0
+		_Alpha("2D Light Map Texture", 2D) = "white" {}
 	}
-	SubShader
-	{
-		// No culling or depth
-		Cull Off ZWrite Off ZTest Always
+		SubShader
+		{
+			//Tags{"Queue" = "AlphaTest" "IgnoreProjector" = "True" "RenderType" = "TransparentCutout"}
+			// No culling or depth
+			//Cull Off ZWrite Off ZTest Always
+
+			//Blend SrcAlpha OneMinusSrcAlpha
+
+			//LOD 100
+
+			//Lighting Off
 
 		Pass
 		{
@@ -32,30 +37,32 @@
 				float4 vertex : SV_POSITION;
 			};
 
+			sampler2D _MainTex;
+			sampler2D _Alpha;
+
 			v2f vert (appdata v)
 			{
 				v2f o;
 				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.uv = v.uv;
+
 				return o;
 			}
-			
-			sampler2D _MainTex;
-			sampler2D _DisplaceTex;
-			float _Magnitude;
-			float _Enabled;
 
-			float4 frag (v2f i) : SV_Target
+			fixed4 frag (v2f i) : SV_Target
 			{
+				/*
 				float4 disp = tex2D(_DisplaceTex, i.uv);
 				disp.y = disp.y - 1;
 				disp = ((disp * 2) - 1) * _Magnitude;
+				*/
 
+				float4 light = tex2D(_Alpha, i.uv);
 				float4 main_col = tex2D(_MainTex, i.uv);
-				if (_Enabled == 1.0) {
-					//main_col *= 1 - disp;
-					main_col = disp;
-				}
+				float4 light_val = dot(light, light);
+
+				//main_col = main_col + (main_col * light_val); //interesting inverted shadow effect
+				main_col *= light_val;
 				return main_col;
 			}
 			ENDCG
