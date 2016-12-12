@@ -4,9 +4,10 @@ using System.Collections;
 public class AI_Controller : MonoBehaviour
 {
     public Transform[] waypoint;        // The amount of Waypoint you want
-    public float patrolSpeed = 3f;       // The walking speed between Waypoints
+    public float patrolSpeed = 0.3f;       // The walking speed between Waypoints
     public bool loop = true;       // Do you want to keep repeating the Waypoints
     public float pauseDuration = 0;   // How long to pause at a Waypoint
+    public float scaleMod = .01f;
 
     private float curTime;
     private int currentWaypoint = 0;
@@ -39,7 +40,7 @@ public class AI_Controller : MonoBehaviour
     {
         Vector3 target = waypoint[currentWaypoint].position;
         Vector3 moveDirection = target - transform.position;
-        if (moveDirection.magnitude < 0.5f)
+        if (moveDirection.magnitude < scaleMod)
         {
             if (curTime == 0)
             {
