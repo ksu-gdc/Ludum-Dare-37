@@ -10,6 +10,7 @@ public class RayMarchingIEScript: MonoBehaviour {
     {
         Camera main = Camera.main;
         EffectMaterial.SetVector("_WorldSpaceLightPos", main.WorldToViewportPoint(LightOrigin.position));
+        EffectMaterial.SetFloat("_AspectRatio", 1/main.aspect);
         Graphics.Blit(src, dst, EffectMaterial);
     }
 }

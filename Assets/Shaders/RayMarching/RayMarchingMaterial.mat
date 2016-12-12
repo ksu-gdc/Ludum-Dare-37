@@ -78,7 +78,7 @@ Material:
     m_Floats:
     - first:
         name: _AspectRatio
-      second: 0.51
+      second: 0.49813783
     - first:
         name: _BumpScale
       second: 1
@@ -105,10 +105,19 @@ Material:
       second: 1
     - first:
         name: _Intensity
-      second: 0.257
+      second: 0.237
     - first:
         name: _Magnitutde
       second: 0
+    - first:
+        name: _MarchDist
+      second: 0.005
+    - first:
+        name: _MarchIterations
+      second: 1
+    - first:
+        name: _MaxIterations
+      second: 16.5
     - first:
         name: _Metallic
       second: 0
