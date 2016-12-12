@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - EntryDoorTrigger
+  - Pick Up
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Flooring
+    uniqueID: 903034391
+    locked: 0
+  - name: Furniture
+    uniqueID: 3457076093
+    locked: 0
+  - name: Character
+    uniqueID: 4125589093
     locked: 0

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player_Controller : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Player_Controller : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Pick Up")) other.gameObject.SetActive(false);
+        else if (other.gameObject.CompareTag("EntryDoorTrigger")) SceneManager.LoadScene("Neighborhood");
     }
 
     void Update()
