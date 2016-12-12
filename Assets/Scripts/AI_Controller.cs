@@ -11,10 +11,13 @@ public class AI_Controller : MonoBehaviour
     private float curTime;
     private int currentWaypoint = 0;
     private CharacterController character;
+    private Animator anim;
 
     void Start()
     {
         character = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
+        anim.SetBool("Walking", false);
     }
 
     void Update()
@@ -39,11 +42,15 @@ public class AI_Controller : MonoBehaviour
         if (moveDirection.magnitude < 0.5f)
         {
             if (curTime == 0)
+            {
                 curTime = Time.time; // Pause over the Waypoint
+                anim.SetBool("Walking", false);
+            }
             if ((Time.time - curTime) >= pauseDuration)
             {
                 currentWaypoint++;
                 curTime = 0;
+                anim.SetBool("Walking", true);
             }
         }
         else
