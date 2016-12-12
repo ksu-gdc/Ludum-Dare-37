@@ -99,8 +99,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 323151885}
   - 212: {fileID: 323151884}
-  - 95: {fileID: 323151886}
   - 50: {fileID: 323151883}
+  - 95: {fileID: 323151886}
   - 114: {fileID: 323151882}
   - 58: {fileID: 323151887}
   m_Layer: 0
@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb3db13628a4fa4882cfe42247f7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100000
+  speed: 2
+  rotSpeed: 2
 --- !u!50 &323151883
 Rigidbody2D:
   serializedVersion: 2
@@ -131,7 +132,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 323151881}
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 100000
+  m_LinearDrag: 4.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_IsKinematic: 0
@@ -171,7 +172,7 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: 18a6cb27661007b468e9a46770a16a19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
 --- !u!4 &323151885
 Transform:
   m_ObjectHideFlags: 0
@@ -293,7 +294,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: -1.5542332, y: 0}
   serializedVersion: 2
@@ -323,7 +324,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.1218592, y: -1.5542294}
+  m_Offset: {x: 1.1218592, y: -1.58}
   serializedVersion: 2
   m_Size: {x: 0.23893757, y: 0.09154206}
 --- !u!61 &991093891
@@ -528,11 +529,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012994123664, guid: 6b3bde0bc0c31d44dbe7fa0d075950cd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.29
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: 4000012994123664, guid: 6b3bde0bc0c31d44dbe7fa0d075950cd, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 4000012994123664, guid: 6b3bde0bc0c31d44dbe7fa0d075950cd, type: 2}
       propertyPath: m_LocalPosition.z
