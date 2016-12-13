@@ -78,7 +78,7 @@ Material:
     m_Floats:
     - first:
         name: _AspectRatio
-      second: 0.5328685
+      second: 0.49813783
     - first:
         name: _BumpScale
       second: 1
@@ -105,7 +105,7 @@ Material:
       second: 1
     - first:
         name: _Intensity
-      second: 0.155
+      second: 0.244
     - first:
         name: _Magnitutde
       second: 0

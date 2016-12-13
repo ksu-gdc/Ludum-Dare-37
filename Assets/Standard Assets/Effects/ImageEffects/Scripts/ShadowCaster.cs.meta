@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 95e841049952c444f876fa9ccc5ebf15
+timeCreated: 1481616056
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - OcclusionMap: {instanceID: 0}
+  - CastingShader: {fileID: 4800000, guid: c463a2de393b4254b8034e082472fec4, type: 3}
+  - AveragingShader: {fileID: 4800000, guid: c82497026c02d424291f62e1977f820a, type: 3}
+  - ClearShader: {fileID: 4800000, guid: c8cd836e0d46b7e4c9991e73669cb532, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
